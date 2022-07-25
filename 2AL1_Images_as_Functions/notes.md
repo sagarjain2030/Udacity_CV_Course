@@ -15,7 +15,7 @@
 - Quantization is required since we cannot use continuous real values.
 - In image, pixel value is represented as $(x , y)$. It means x goes horizontally while y goes vertically      
 - Since image is considered as matrix in computer, $i$ represents row and $j$ represents column 
-![image_details](Picture1.jpg)
+![image_details](picture1.jpg)
 
 
 ### Project/Code/Tutorials that can be done:
