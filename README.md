@@ -7,3 +7,9 @@ This repository includes my study for udacity computer vision course.It will inc
   
 - [Notes](1AL1_Introduction/notes.md)
 </details>
+<details>
+<summary> 2A-L1 Images as Functions</summary>
+
+
+- [Notes](2AL1_Images_as_Functions/notes.md)
+</details>
