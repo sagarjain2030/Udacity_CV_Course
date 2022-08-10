@@ -20,3 +20,5 @@
 
 ### Project/Code/Tutorials that can be done:
 - For any given grayscale image, print a surface with x and y as coordinates and gray scale value as value.
+- Write a function to convert given matrix to quantized matrix with given min and max values.([notebook](2A_L1_Image_As_Function.ipynb))
+- Load and Display Dolphin.png. Print its size and datatype.
