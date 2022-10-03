@@ -16,6 +16,7 @@
 - In image, pixel value is represented as $(x , y)$. It means x goes horizontally while y goes vertically      
 - Since image is considered as matrix in computer, $i$ represents row and $j$ represents column 
 ![image_details](picture1.jpg)
+- In summation of image, we need average of both pixel values. This can be done either by first taking half values of each pixel and then adding up or summing these values and then halving them. But in second case, numbers are stored in uint8  format. So if sum is greater than 255,  it will wrapped around starting from 0 again, which changes actual result.
 
 
 ### Project/Code/Tutorials that can be done:
