@@ -24,6 +24,10 @@
 	1. Salt and Pepper : Random black and white pixels
 	2. Impulse Noise : Random white pixels.
 	3. Gaussian Noise (Normal Distributed noise) : Variation in intensity of pixels drawn from Gaussian Normal distribution
+- Difference between 2 images
+	- Difference Between 2 images can be calculated by simply subtracting them.
+	- Brighter are in difference indicates where two images are differe more.
+	- In difference, order matters. The images are stored in uint8 type. So for negative numbers, (pixel value of first image less than second image), roll over effect takes place and negative numbers are roll over to positive side and decreases(from 255 to 0)
 
 ### Project/Code/Tutorials that can be done:
 - For any given grayscale image, print a surface with x and y as coordinates and gray scale value as value.
