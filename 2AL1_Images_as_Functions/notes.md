@@ -17,7 +17,13 @@
 - Since image is considered as matrix in computer, $i$ represents row and $j$ represents column 
 ![image_details](picture1.jpg)
 - In summation of image, we need average of both pixel values. This can be done either by first taking half values of each pixel and then adding up or summing these values and then halving them. But in second case, numbers are stored in uint8  format. So if sum is greater than 255,  it will wrapped around starting from 0 again, which changes actual result.
-- In scalar multiplication, if we multiply image with scalar greater than 1, it would give brighter image while scalar less than 1 will give darker image. 
+- In scalar multiplication, if we multiply image with scalar greater than 1, it would give brighter image while scalar less than 1 will give darker image.
+- Noise is just another function that is combined with original function to get a new function
+		$I'(x,y) = I(x,y) + ŋ(x,y)
+- Common types of noise
+	1. Salt and Pepper : Random black and white pixels
+	2. Impulse Noise : Random white pixels.
+	3. Gaussian Noise (Normal Distributed noise) : Variation in intensity of pixels drawn from Gaussian Normal distribution
 
 ### Project/Code/Tutorials that can be done:
 - For any given grayscale image, print a surface with x and y as coordinates and gray scale value as value.
