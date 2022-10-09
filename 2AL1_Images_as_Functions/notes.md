@@ -19,7 +19,7 @@
 - In summation of image, we need average of both pixel values. This can be done either by first taking half values of each pixel and then adding up or summing these values and then halving them. But in second case, numbers are stored in uint8  format. So if sum is greater than 255,  it will wrapped around starting from 0 again, which changes actual result.
 - In scalar multiplication, if we multiply image with scalar greater than 1, it would give brighter image while scalar less than 1 will give darker image.
 - Noise is just another function that is combined with original function to get a new function
-		$I'(x,y) = I(x,y) + ŋ(x,y)
+		$I'(x,y)$ = $I(x,y)$ + $ŋ(x,y)$
 - Common types of noise
 	1. Salt and Pepper : Random black and white pixels
 	2. Impulse Noise : Random white pixels.
