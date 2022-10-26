@@ -29,9 +29,13 @@
 	- Brighter are in difference indicates where two images are differe more.
 	- In difference, order matters. The images are stored in uint8 type. So for negative numbers, (pixel value of first image less than second image), roll over effect takes place and negative numbers are roll over to positive side and decreases(from 255 to 0)
 - Random noise generator:
-	-  Random noise is generated using numpy random function
-	-  To generate noise with normal distribution, (sand and pepper noise), use np.random.normal.
+	- Random noise is generated using numpy random function
+	- To generate noise with normal distribution, (sand and pepper noise), use np.random.normal.
 	- It gives random numbers with mean at 0 and standard deviation at -1 and 1.
+	- These small values does not affect much to image with values ranging from 0 and 255.
+	- So we choose different sigma which adds better noise	
+		$noise$ = $randn(size(img))$ * $sigma$
+- Remember to normalise image only for display and not for computation reason.
 ### Project/Code/Tutorials that can be done:
 - For any given grayscale image, print a surface with x and y as coordinates and gray scale value as value.
 - Write a function to convert given matrix to quantized matrix with given min and max values.([notebook](2A_L1_Image_As_Function.ipynb))
