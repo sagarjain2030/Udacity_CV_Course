@@ -13,3 +13,9 @@ This repository includes my study for udacity computer vision course.It will inc
 
 - [Notes](2AL1_Images_as_Functions/notes.md)
 </details>
+<details>
+<summary> 2A-L2 Filtering</summary>
+
+
+- [Notes](2AL2_Filtering/notes.md)
+</details>
