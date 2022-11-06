@@ -22,7 +22,9 @@
 	- This is called cross correlation denoted by G = H $\bigodot$ F
 	- The H is called kernel or mask. $H\left[u,v\right]$ is matrix of weights in linear combination.
 	- To create a blurry spot at a pixel, use filter with higher value in middle, falling of the edges.
-	- So if we build H such that nearest neightbours have most influence. For example, in case of $3*3$
-				|1|2|1|
-		1/16 * 	|2|4|2|
-				|1|2|1|
+	- So if we build H such that nearest neightbours have most influence.
+	- This type of mash is also known as Gaussian filter
+- so Gaussian filer is filter with circular symmetric fuzzy blob at center. i.e. middle values are highest while values away from middle are decreasing.
+	- isotropic ==> circularly symmetric 
+	- variance of Gaussian filters determine extent of smooting .
+	- The bigger the variance $\sigma^2$ , the more blur    
