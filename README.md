@@ -19,3 +19,9 @@ This repository includes my study for udacity computer vision course.It will inc
 
 - [Notes](2AL2_Filtering/notes.md)
 </details>
+<details>
+<summary> 2A-L3 Linearity and convolution</summary>
+
+
+- [Notes](2AL3_Linearity_and_convolution/notes.md)
+</details>
