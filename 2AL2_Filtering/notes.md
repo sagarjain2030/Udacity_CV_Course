@@ -12,16 +12,17 @@
 	- For weighted average, number of pixels should be odd with interessted pixel having highest weight and it should be in center.
 - Correlational Filtering
 	- Uniform weights of kernel (filter)
-		- if we have window size of $\(2k+1\) * (2k+1)$, 
-		$\G[i,j] = $1/(2k+1)^2 $\sum_{u=-k}^k \sum_{v=-k}^k F[i+u,j+v]
-		- Uniform weights means all weights are equal (mostly 1)
+		- if we have window size of $\(2k+1\) * (2k+1)$,      
+		$$G[i,j]=\left(1/\left(2k+1\right)^2\right)  \sum_{u=-k}^k \sum_{v=-k}^k F\left[i+u,j+v\right] $$      	
+		- Uniform weights means all weights are equal  (mostly 1)
 	- Non Uniform weights:
-		- if we have window size of $\(2k+1\) * (2k+1)$, 
-		$\G[i,j] = $\sum_{u=-k}^k \sum_{v=-k}^k  H[u,v]F[i+u,j+v]
-		where H[u,v] are non uniform weights.
-	- This is called cross correlation denoted by G = H $\dots$ F
-	- The H is called kernel or mask. H[u,v] is matrix of weights in linear combination.
+		- if we have window size of $\(2k+1\) * (2k+1)$,    
+		$$G[i,j]=\sum_{u=-k}^k \sum_{v=-k}^k H\left[u,v\right] F\left[i+u,j+v\right] $$      
+		where $H\left[u,v\right]$ are non uniform weights.
+	- This is called cross correlation denoted by G = H $\bigodot$ F
+	- The H is called kernel or mask. $H\left[u,v\right]$ is matrix of weights in linear combination.
 	- To create a blurry spot at a pixel, use filter with higher value in middle, falling of the edges.
-	
-
-### Project/Code/Tutorials that can be done:
+	- So if we build H such that nearest neightbours have most influence. For example, in case of $3*3$
+				|1|2|1|
+		1/16 * 	|2|4|2|
+				|1|2|1|
