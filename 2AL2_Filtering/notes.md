@@ -10,6 +10,18 @@
 	- In weighted average, weights are assigned to each pixel value, taken their multiplications and then averaged out to get final pixel value.
 	- These weights are divided by total sum of weights.It gives smoother value of pixel.
 	- For weighted average, number of pixels should be odd with interessted pixel having highest weight and it should be in center.
+- Correlational Filtering
+	- Uniform weights of kernel (filter)
+		- if we have window size of $\(2k+1\) * (2k+1)$, 
+		$\G[i,j] = $1/(2k+1)^2 $\sum_{u=-k}^k \sum_{v=-k}^k F[i+u,j+v]
+		- Uniform weights means all weights are equal (mostly 1)
+	- Non Uniform weights:
+		- if we have window size of $\(2k+1\) * (2k+1)$, 
+		$\G[i,j] = $\sum_{u=-k}^k \sum_{v=-k}^k  H[u,v]F[i+u,j+v]
+		where H[u,v] are non uniform weights.
+	- This is called cross correlation denoted by G = H $\dots$ F
+	- The H is called kernel or mask. H[u,v] is matrix of weights in linear combination.
+	- To create a blurry spot at a pixel, use filter with higher value in middle, falling of the edges.
 	
 
 ### Project/Code/Tutorials that can be done:
