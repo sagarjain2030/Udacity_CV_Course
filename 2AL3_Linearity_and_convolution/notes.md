@@ -11,3 +11,10 @@
 	- Building block of any such function mentioned above is impulse. So, in discrete world, impulse is just value 1 at a single location.
 	- In continuouse world, impulse is an idealized function that has unit area 
 	- For any unknown system, response for impulse by that system is impulse response. So if system is linear, impuslse response is h(x)
+- Impulse response in Image:
+	- Consider image with only 1 pixel value as 1 while all others are 0.
+	- So when we run a correlational filter of impulse input, we get mask values vertically and horizonatally both flipped.
+- How many multiples would happen for applying mask of size N \* N over and image of size M \* M :
+	- So for each mask and one pixel of image, we have N \* N multiplications happening.
+	- Filter will be performing operations for M \* M times
+	- So total multiples are M \* M \* N \* N
