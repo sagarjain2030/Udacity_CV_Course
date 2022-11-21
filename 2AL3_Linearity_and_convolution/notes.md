@@ -18,3 +18,10 @@
 	- So for each mask and one pixel of image, we have N \* N multiplications happening.
 	- Filter will be performing operations for M \* M times
 	- So total multiples are M \* M \* N \* N
+- Convolution 
+	- Now since correlational operation gives us output vertically and horizontally flipped, applying a already flipped filter will give output as it is.
+	- Application of this flipped filter is called convolution.
+	- So convolution filters image bottom to top and right to left.
+	- For symmetric filters, correlational and convolutional operation makes no difference but the output of these 2 filters matters for asymmetric filters.
+	- If we convolve an image with an impulse, we get original image.
+	
