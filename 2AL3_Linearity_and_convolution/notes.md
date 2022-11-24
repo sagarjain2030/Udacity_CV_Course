@@ -24,4 +24,17 @@
 	- So convolution filters image bottom to top and right to left.
 	- For symmetric filters, correlational and convolutional operation makes no difference but the output of these 2 filters matters for asymmetric filters.
 	- If we convolve an image with an impulse, we get original image.
-	
+- Shift Invariant
+	- Operator behave same everywhere i.e. value of output depend upon pattern in image neighbourhood and not on position of neighbourhood.
+- Filtering is Linear operation as correlation and Convolution are linear operation
+- Properties of Convolution :
+	- Linear and Shift Invariant
+	- Commutative:
+	 	$$f \* g = g \* f$$
+	- Associative:
+	 	$$\left(f \* g\right) \* h = f \* \left(g \* h\right)$$ 
+	- Identity:
+	 	$$unit\   impulse\    e = \left[...,0,0,1,0,0,...\right]\ then$$
+	 		$$f \* e = f$$
+	- Differentitation:
+	 	$$\frac{\mathrm d}{\mathrm d x} \big( f \* g \big) = \left(\frac{\mathrm d}{\mathrm d x}f\right) \* g $$
