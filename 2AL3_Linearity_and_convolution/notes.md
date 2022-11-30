@@ -38,3 +38,10 @@
 	 		$$f \* e = f$$
 	- Differentitation:
 	 	$$\frac{\mathrm d}{\mathrm d x} \big( f \* g \big) = \left(\frac{\mathrm d}{\mathrm d x}f\right) \* g $$
+-  Separability : 
+  	- As above, For image of size W \* W and kernel (filter) of size N \* N, number of multiplications required are $$W^2N^2$$ which is huge.
+  	- If kernel can be created by using one row and one column, it is called Linearly Separable Kernel.
+  	- So filter is separable such that square kernel H can be obtain by convolving a single column vector with single row vector.
+  		$${\left\lbrack \matrix{1 \cr 2 \cr 1} \right\rbrack} * \left\lbrack \matrix{1 & 2 & 1} \right\rbrack = \left\lbrack \matrix{1 & 2 & 1 \cr 2 & 4 & 2 \cr 1 & 2 & 1} \right\rbrack $$
+- So we have $$C \* R = H$$ and we want $$G \= H \* F$$ So $$G = ( C \* R ) \* F$$ that is $$G = C \* (R \* F)$$ 
+- So we have 2 convolution operation performed but each one is only performing $$W \* N \* N $$ multiplication.Thus total multiplications are $$2 \* W \* N^2$$ which are far less than $$W^2N^2$$
