@@ -45,3 +45,16 @@
   		$${\left\lbrack \matrix{1 \cr 2 \cr 1} \right\rbrack} * \left\lbrack \matrix{1 & 2 & 1} \right\rbrack = \left\lbrack \matrix{1 & 2 & 1 \cr 2 & 4 & 2 \cr 1 & 2 & 1} \right\rbrack $$
 - So we have $$C \* R = H$$ and we want $$G \= H \* F$$ So $$G = ( C \* R ) \* F$$ that is $$G = C \* (R \* F)$$ 
 - So we have 2 convolution operation performed but each one is only performing $$W \* N \* N $$ multiplication.Thus total multiplications are $$2 \* W \* N^2$$ which are far less than $$W^2N^2$$
+- Boundary Cases:
+	- In case of boundaries, we can handle them in 3 ways:
+		1. Full : 
+			- Output is taken from position where filter is just touching the corner pixel. i.e corner pixel of image and corner pixel of filter are overlapping but filter is outside of image
+			- Dimension of output image is larger than input image.
+		2. Same :
+			- Output is taken from position where corner pixel is at center of filter.
+			- Dimension of output image is same as input image.
+		3. Valid :
+			- Output is taken from position where filter is completely inside image and it's outmost corner pixel is on corner pixel of image.
+			- Dimension of output image is smaller than input image.  
+
+![Boundary_Case](Boundary_Case.jpg)
