@@ -58,3 +58,17 @@
 			- Dimension of output image is smaller than input image.  
 
 ![Boundary_Case](Boundary_Case.jpg)
+- Now, above is mentioned how to use filter around the edges. If valid is considered then nothing more to do. But if Full or Same is considered, then pixels outside of images but within filter needs to have some values.
+- So this can be done as follows:
+ 	- Clip Filter: 
+ 		- Consider the outer pixels all black.
+ 	- Wrap around : 
+ 		- Consider image is wrapped around i.e. image is rotating.
+ 		- Just like periodic signal where after a time interval, same signal is repeated, here image is repeated.
+ 	- Copy Edge (Replicate):
+ 		- Extend the edges till filter pixels in all direction.
+ 	- Reflection (Symmetric):
+ 		- Reflect pixels across edges. 
+ 		- So consider the edge as mirror and what we see at filter's pixels are nothing but pixel values going from edges to center pixels.
+ 		
+- 	
