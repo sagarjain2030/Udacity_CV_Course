@@ -70,5 +70,13 @@
  	- Reflection (Symmetric):
  		- Reflect pixels across edges. 
  		- So consider the edge as mirror and what we see at filter's pixels are nothing but pixel values going from edges to center pixels.
- 		
-- 	
+- Reflection is widely used as the created imagery has same statistics as that of original image.
+- Different Filters:
+	- Impulse:
+		-	When, in an impulse filter,  the impulse is at center and when image convolve with such filter, we get original image as it is.
+		- 	With impulse at different location than center, output image is gets shifted in opposite direction of impulse by 1. This is happened only when correlation is performed with filter. If Covolution is performed, output image is shifted in same direction as that of impulse.
+	- If all 1's is filter and divided by sum of all 1's:
+		- we get output image to be blurred. So this filter is crumy smoothy filter
+	- 2*Impulse - just a above filter:
+		- It acts as sharpening filter which sharpens the image.
+		
