@@ -55,8 +55,8 @@
 			- Dimension of output image is same as input image.
 		3. Valid :
 			- Output is taken from position where filter is completely inside image and it's outmost corner pixel is on corner pixel of image.
-			- Dimension of output image is smaller than input image.  
-
+			- Dimension of output image is smaller than input image.    
+			
 ![Boundary_Case](Boundary_Case.jpg)
 - Now, above is mentioned how to use filter around the edges. If valid is considered then nothing more to do. But if Full or Same is considered, then pixels outside of images but within filter needs to have some values.
 - So this can be done as follows:
@@ -79,4 +79,14 @@
 		- we get output image to be blurred. So this filter is crumy smoothy filter
 	- 2*Impulse - just a above filter:
 		- It acts as sharpening filter which sharpens the image.
+- Noise :
+	- Gaussian Noise :
+		- It is noise applied to each pixel independent of any other pixel.
+		- This noise can be removed by applying Gaussian distribution/local averaging of pixels around the interested pixel, replacing pixel value by local average.
+	- Salt and Pepper Noise :
+		- The noise added by putting totally random values of pixels in image is called salt and pepper noise.
+		- Here, instead of taking local average, where this random value will also contribute, we can search for median. And replace the pixel value by median value.
+		- With this median value, we have avoided the contribution of higher pixel value or lower pixel value added completely at random. So we removed spikes in pixels.Good for salt and pepper noise as well as impulse noise.
+		- Median Filter preserves edges. So it is non linear edge preserving filter.
+![Median_Filter](Median_Filter.jpg)
 		
