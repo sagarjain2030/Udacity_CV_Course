@@ -79,6 +79,8 @@
 		- we get output image to be blurred. So this filter is crumy smoothy filter
 	- 2*Impulse - just a above filter:
 		- It acts as sharpening filter which sharpens the image.
+- Why Unsharp mask makes sharper image:
+	- In old days with negatives, an unsharped/burred negative of original image is used with original image negative to get sharper image. So this blurred negative becomes unsharp mask.
 - Noise :
 	- Gaussian Noise :
 		- It is noise applied to each pixel independent of any other pixel.
