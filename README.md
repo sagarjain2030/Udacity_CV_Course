@@ -25,3 +25,15 @@ This repository includes my study for udacity computer vision course.It will inc
 
 - [Notes](2AL3_Linearity_and_convolution/notes.md)
 </details>
+<details>
+<summary> 2A-L4 Filters as templates</summary>
+
+
+- [Notes](2AL4_Filters_as_templates/notes.md)
+</details>
+<details>
+<summary> 2A-L5 Edge detection Gradients</summary>
+
+
+- [Notes](2AL5_Edge_detection_Gradients/notes.md)
+</details>
