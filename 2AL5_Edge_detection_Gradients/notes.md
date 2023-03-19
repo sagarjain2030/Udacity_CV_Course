@@ -28,3 +28,12 @@
 		$$Θ = \{tan}^{-1} \left(\frac{\mathrm \delta f}{\mathrm \delta y} / \frac{\mathrm \delta f}{\mathrm \delta x}\right) $$
 	- Amount 
 		$$||▼f|| = \sqrt{{\left(\frac{\mathrm \delta f}{\mathrm \delta y}\right)}^{2} + {\left(\frac{\mathrm \delta f}{\mathrm \delta x}\right)}^{2}}$$
+- If Gradient is zero, that means 
+	1. Either image is constant over entire neighbourhood.
+	2. Underlying function is either maximum or minimum
+- Discrete Gradient.
+	- Partial derivative is given as
+		$$ \frac{\mathrm \delta f\left( x, y\right)}{\mathrm \delta x} =    \lim_{x\to\infty} \frac{f\left(x+\epsilon,y\right) - f\left(x,y\right)}{\epsilon}  $$
+	- But in case of discreet data, there cannot be $$\epsilon$$ but a finite distance only.So
+		$$ \frac{\mathrm \delta f\left( x, y\right)}{\mathrm \delta x} =    \lim_{x\to\infty} \frac{f\left(x+1,y\right) - f\left(x,y\right)}{1}  $$
+	- This means, gradient is taken by moving 1 unit distance (in case of a image, 1 pixel) at a time.
