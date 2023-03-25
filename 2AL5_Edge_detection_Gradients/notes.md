@@ -37,3 +37,13 @@
 	- But in case of discreet data, there cannot be ε but a finite distance only.So  
 		$$\frac{\mathrm \delta f\left( x, y\right)}{\mathrm \delta x} =    \lim_{x\to\infty} \frac{f\left(x+1,y\right) - f\left(x,y\right)}{1}$$
 	- This means, gradient is taken by moving 1 unit distance (in case of a image, 1 pixel) at a time.
+- For an image, while calculating partial derivative with respect to x, correlation filter would be [-1, 1]
+- For an image, while calculating partila derivative with respect to y, correlation filter would be $$[-1, 1]^T$$ if y is decreaing from top to bottom. If y is decreasing from bottom to top, it would be $$[1, -1]^T$$.
+- This is because, in CS, origin is considered to be at top left hand corner in image. But in mathematics, origin is considered to be at bottom left hand corner in image.
+- If we take only magnitude, then it would give edge image.
+ - Now we want an operator/mask which gives discrete gradient on image, when applied.
+ - it can be $$\left\lbrack \matrix{0 & 0 \cr -1 & +1 \cr 0 & 0} \right\rbrack$$
+ - but problem with this operator is non symmetry. around image point.
+ - One way to have proper operator is to apply this filter to 2 consecutive pixel and take average of them.Thus the operator becomes  
+	 $$\left(\left\lbrack \matrix{0 & 0 + 0 & 0 \cr -1 & -1 + 1 & +1 \cr 0 & 0 + 0 & 0} \right\rbrack\right)  / 2  ...  then$$    
+	 $$\left\lbrack \matrix{0 & 0 & 0 \cr -1/2 & 0 & +1/2 \cr 0 & 0 & 0} \right\rbrack$$
