@@ -33,9 +33,9 @@
 	2. Underlying function is either maximum or minimum
 - Discrete Gradient.
 	- Partial derivative is given as  
-		$$\frac{\mathrm \delta f\left( x, y\right)}{\mathrm \delta x} =    \lim_{x\to\infty} \frac{f\left(x+\epsilon,y\right) - f\left(x,y\right)}{\epsilon}$$
+		$$\frac{\mathrm \delta f\left( x, y\right)}{\mathrm \delta x} =    \lim_{x\to0} \frac{f\left(x+\epsilon,y\right) - f\left(x,y\right)}{\epsilon}$$
 	- But in case of discreet data, there cannot be ε but a finite distance only.So  
-		$$\frac{\mathrm \delta f\left( x, y\right)}{\mathrm \delta x} =    \lim_{x\to\infty} \frac{f\left(x+1,y\right) - f\left(x,y\right)}{1}$$
+		$$\frac{\mathrm \delta f\left( x, y\right)}{\mathrm \delta x} =    \lim_{x\to0} \frac{f\left(x+1,y\right) - f\left(x,y\right)}{1}$$
 	- This means, gradient is taken by moving 1 unit distance (in case of a image, 1 pixel) at a time.
 - For an image, while calculating partial derivative with respect to x, correlation filter would be [-1, 1]
 - For an image, while calculating partila derivative with respect to y, correlation filter would be $$[-1, 1]^T$$ if y is decreaing from top to bottom. If y is decreasing from bottom to top, it would be $$[1, -1]^T$$.
