@@ -47,3 +47,15 @@
  - One way to have proper operator is to apply this filter to 2 consecutive pixel and take average of them.Thus the operator becomes  
 	 $$\left(\left\lbrack \matrix{0 & 0 + 0 & 0 \cr -1 & -1 + 1 & +1 \cr 0 & 0 + 0 & 0} \right\rbrack\right)  / 2  ...  then$$    
 	 $$\left\lbrack \matrix{0 & 0 & 0 \cr -1/2 & 0 & +1/2 \cr 0 & 0 & 0} \right\rbrack$$
+- Sobel Operator:
+	- In sobel operator, origin is considered to be at left bottom corner of image.So y is increasing(positively) in upward direction.    
+	 $$S_{X} = \frac{1}{8} * \left\lbrack \matrix{-1 & 0 & +1 \cr -2 & 0 & +2 \cr -1 & 0 & +1} \right\rbrack$$
+	 $$S_{Y} = \frac{1}{8} * \left\lbrack \matrix{+1 & +2 & +1 \cr 0 & 0 & 0 \cr -1 & -2 & -1} \right\rbrack$$
+	- So idea is , to check boundary change, look not only at pixel ahead and behind of interest pixel, but also the nearby pixels
+	- So sobel operator considers all nearby pixel of interest pixel and performs differentials. To normalize, it divides the values by 8.
+	- So sobel gradient is 
+		$$▼I = {\left\lbrack g_{x} , g_{y} \right\rbrack}^{T} $$	
+		- direction	
+			$$Θ = \{atantwo}( g_{y},  g_{x}) $$
+		- Amount 
+			$$g = \sqrt{{\left(g_{x}\right)}^{2} + {\left(g_{y}\right)}^{2}}$$
