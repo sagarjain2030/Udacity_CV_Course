@@ -59,3 +59,16 @@
 			$$Θ = \{atantwo}( g_{y},  g_{x}) $$
 		- Amount 
 			$$g = \sqrt{{\left(g_{x}\right)}^{2} + {\left(g_{y}\right)}^{2}}$$
+- The other operators are:
+	- Prewitt:
+				$$S_{X} = \left\lbrack \matrix{-1 & 0 & +1 \cr -1 & 0 & +1 \cr -1 & 0 & +1} \right\rbrack$$
+				$$S_{Y} = \left\lbrack \matrix{+1 & +1 & +1 \cr 0 & 0 & 0 \cr -1 & -1 & -1} \right\rbrack$$
+	- Robert:
+				$$S_{X} = \left\lbrack \matrix{0 & +1 \cr -1 & 0} \right\rbrack$$
+				$$S_{Y} = \left\lbrack \matrix{+1 & 0 \cr 0 & -1} \right\rbrack$$
+- It is better to compute gradient using correlation because it is easier to know which way the derivative are being computed.
+- Now in real worlds, image is not that clean. We need to remove noise in order to get better edge detection.
+	- Removal of noise can be done by smoothning image. So apply filter to smoothen the image.
+	- Hence the procedure becomes, 
+		$$Image I \thinspace \underset{\text{apply \thinspace smoothning \thinspace filter}} \longrightarrow \thinspace \thinspace \thinspace h * I \thinspace   \underset{\text{Apply\thinspace edge\thinspace detection\thinspace filter}} \longrightarrow \thinspace\thinspace\thinspace\frac{\mathrm \delta}{\mathrm \delta x}\left( h * I \right) $$
+
