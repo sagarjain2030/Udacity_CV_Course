@@ -70,5 +70,13 @@
 - Now in real worlds, image is not that clean. We need to remove noise in order to get better edge detection.
 	- Removal of noise can be done by smoothning image. So apply filter to smoothen the image.
 	- Hence the procedure becomes, 
-		$$Image I \thinspace \underset{\text{apply \thinspace smoothning \thinspace filter}} \longrightarrow \thinspace \thinspace \thinspace h * I \thinspace   \underset{\text{Apply\thinspace edge\thinspace detection\thinspace filter}} \longrightarrow \thinspace\thinspace\thinspace\frac{\mathrm \delta}{\mathrm \delta x}\left( h * I \right) $$
+		$$Image\thinspace I \thinspace \underset{\text{apply \thinspace smoothning \thinspace filter}} \longrightarrow \thinspace \thinspace \thinspace h * I \thinspace   \underset{\text{Apply\thinspace edge\thinspace detection\thinspace filter}} \longrightarrow \thinspace\thinspace\thinspace\frac{\mathrm \delta}{\mathrm \delta x}\left( h * I \right) $$
+	- But by derivative theorem of convolution,
+		$$\frac{\mathrm \delta}{\mathrm \delta x}\left( h * I \right) = \frac{\mathrm \delta}{\mathrm \delta x}\left( h\right)  * I $$
+	- So instead of derivating over filtered image, we can take derivative of smoothning filter and apply this result to image.
+	- Now this new image would give maxima at the edge but to determine where is maxima, another derivative is needed.So if one more derivative is applied, $$\frac{\mathrm \delta^2}{\mathrm \delta^2 x}\left( h\right)  * I $$
+	- So wherever this gradient becomes zero (zero crossing occurs), that point is edge.
+	- Here we take advantage of Associativity as it allowed us to change which operators were applied first. Also the differentiation is a linear operation which allowed associativity.
+
+
 
