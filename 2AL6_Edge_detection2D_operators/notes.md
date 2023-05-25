@@ -26,3 +26,17 @@
 	3. Apply a low threshold to find a weak but plausible edge pixels.
 	4. Extend the strong edges to follow weak edge pixels.
 - The disadvantage of canny edge operator is since it depends upon how smooth image is, Gaussian sigma may lead it to be suseptible to noise in image
+- In case of 1D, we can get edge by applying 2nd derivative . But in case of 2D, it is possible to have 2nd derivative either 
+in
+	- completely X direction
+	- completely Y direction
+	- 1st derivative in both X and Y direction.
+- To avoid such complications, we can apply Laplacian operator.
+$${▼}^{2}h = \frac{\mathrm {d}^{2}f}{\mathrm d{x}^{2}} + \frac{\mathrm {d}^{2}f}{\mathrm d{y}^{2}} $$
+Here $${▼}^{2}$$ is Laplacian operator and Zero crossings give the edges.
+- So in 2D, we can apply either,
+	- Difference between Right shifted image by 1 pixel and left shifted image by 1 pixel
+	- Canny Edge Detection
+	- Difference of Gaussian i.e. applying 2nd derivative in either the 3 possibilities
+	- Laplacian of Gaussian    
+and Search for zero crossings to get the edges.
